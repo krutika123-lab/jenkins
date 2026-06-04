@@ -1,12 +1,12 @@
 {
-  "engines":{
-    "node":"22.12.0"
+  "engines": {
+    "node": "22.12.0"
   },
   "name": "alumni-portal",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "devStart:": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "mongoose": "^8.18.0",
     "multer": "^2.0.2",
     "nodemailer": "^7.0.6",
+    "nodemon": "^3.1.14",
     "override": "^0.0.1",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",

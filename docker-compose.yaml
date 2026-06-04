@@ -1,0 +1,30 @@
+services:
+   frontend:
+      build:
+        context: .
+        dockerfile: FrontendDocker/Dockerfile
+      ports:
+         - "3000:3000"
+      networks:
+         - mynet     
+   backend:
+      build:
+        context: .
+        dockerfile: Backenddocker/Dockerfile
+      ports:
+          - "5050:5050"
+      depends_on:
+          - mongo
+      networks:
+          - mynet
+   mongo:
+      image: mongo:latest
+      networks:
+          - mynet
+      volumes:
+            - ./mongodata:/data/db
+         
+
+networks:
+  mynet:
+      driver: bridge
