@@ -22,9 +22,12 @@ services:
       networks:
           - mynet
       volumes:
-            - ./mongodata:/data/db
+            - mongo_data:/data/db
          
 
 networks:
   mynet:
       driver: bridge
+volumes:
+  mongo_data:      
+      
